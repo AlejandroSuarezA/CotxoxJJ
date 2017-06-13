@@ -19,9 +19,11 @@ public class Conductor {
 	private String nombre = "a la espera de nombre";
 	private String matricula = "matricula sin especificar";
 	private String modelo = "modelo sin decidir";
+	private String cara = "aqui va su cara bonita";
 	private ArrayList<Integer> valoraciones = new ArrayList<>();
 	private double valoracionMedia = 0.0;
-	private Boolean ocupado = true;
+	private Boolean ocupado = false;
+	
 
 	// Constructor
 
@@ -49,6 +51,14 @@ public class Conductor {
 
 	public String getModelo() {
 		return this.modelo;
+	}
+	
+	public void setCareto(String tuCaraAqui) {
+		this.cara = tuCaraAqui;
+	}
+	
+	public String getCareto() {
+		return this.cara;
 	}
 
 	public void setValoracion(int valoracion) {

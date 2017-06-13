@@ -112,13 +112,17 @@ html, span{
     font-size: 14px;
 }
 
-#destination{
+#destinationDiv{
     color: #E91E63;
     margin-left: 15px;
     font-size: 14px;
-    margin-top: 5%;
+    margin-top: 2%;
+    padding-left: 20px;
 }
 
+#selection{
+    padding: 5px;
+}
 /*Button*/
 /*******/
 #divButton{

@@ -35,7 +35,7 @@ html{
     position: relative;
     float: left;
     height: 100%;
-    width: 15%;
+    width: 18%;
 }
 
 #driverImg{
@@ -46,7 +46,7 @@ html{
 #userLocation{
     position: relative;
     height: 20%;
-    width: 85%;
+    width: 82%;
     top: 0;
     float: right;
     display: inline-block;
@@ -57,7 +57,7 @@ html{
 #pickupLocation{
     position: relative;
     height: 49%;
-    width: 85%;
+    width: 82%;
     bottom: 0;
     float: right;
     display: inline-block;

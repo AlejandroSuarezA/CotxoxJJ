@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
     <meta charset="utf-8"></meta>
@@ -16,7 +16,7 @@
             
             <!--Left image-->
             <div id="driverImageDiv">
-                <img id="driverImg" src="../Multimedia/standardCar.png" alt="Driver image"></img>
+                <img id="driverImg" src="../Multimedia/StandardCar.jpg" alt="Driver image"></img>
             </div>
             
             <!--Right information-->
@@ -41,7 +41,7 @@
             
             <div id="price">
                 <span id="total">TOTAL</span>
-                <span id="dollars">20</span>
+                <span id="dollars" th:text="${precio}"></span>
             </div>
             
         </div>

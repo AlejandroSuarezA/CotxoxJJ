@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
     <meta charset="utf-8"></meta>
@@ -18,13 +18,13 @@
         
         <div id="centralDiv">
             <div id="driverImageDiv">
-                <img id="driverImg" src="../Multimedia/standardCar.png" alt="Driver image"></img>
+                <img id="driverImg" th:src='${imgConductor}' alt="Driver image"></img>
             </div>
             
             <div id="rest">
-                <div id="valoracion">Valoracion <span id="spanVal"> asdf</span></div>
-                <div id="nombre">Conductor <span id="spanNombre"> asdf</span> </div>
-                <div id="coche">Coche <span id="spanCoche"> asdflj</span> </div>
+                <div id="valoracion">Valoracion <span id="spanVal" th:text="${valoracion}"></span></div>
+                <div id="nombre">Conductor <span id="spanNombre" th:text="${nameConductor}"></span> </div>
+                <div id="coche">Modelo <span id="spanCoche" th:text="${marcaMoto}"></span></div>
             </div>
         </div>
         
@@ -32,13 +32,13 @@
             <div id="originDiv">
             <ul>
                 <li id="origin">IES Borja Moll</li>
-            </ul>ul>
+            </ul>
             </div>
         
             <div id="destinationDiv">
             <ul>
                 <li id="destination">Plaza España</li>
-            </ul>ul>
+            </ul>
             </div>
         </div>
         

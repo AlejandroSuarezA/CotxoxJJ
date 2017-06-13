@@ -11,12 +11,16 @@ public class CotxoxService {
 	@Autowired
 	private ConductorRepository conductoresDb;
 	
+	@Autowired
+	private CarreraRepository carreraDb;
+	
 	
 	@PostConstruct
 	public void init(){
 		conductoresDb.save(new Conductor("Jésus"));
 		conductoresDb.save(new Conductor("Yisus"));
 		conductoresDb.save(new Conductor("Jebús"));
+		conductoresDb.save(new Conductor("Super Jesus"));
 	}
 	
 	

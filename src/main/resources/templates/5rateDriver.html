@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html  xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
     <meta charset="utf-8"></meta>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
     <link rel="stylesheet" type="text/css" href="../Style/4payDriverStyle.css"></link>
+    
     <title>Valora al conductor</title>
 </head>
 <body>
@@ -12,7 +13,7 @@
     <div id="generalWrap">
         <div id="divLimosna">
             <p id="limosna">Valora a nuestro conductor</p>
-            <p id="driverBoy"> Samantha</p>
+            <p id="driverBoy" th:text="${nameConductor}">nombreConductor</p>
         </div>
         <div id="tableRate">
             <table>
