@@ -1,0 +1,155 @@
+/*Estimated cost style*/
+/*******************/
+body{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    margin: 0;
+    position: absolute;
+    background-image: url(../Multimedia/borjaMollMaps.png);
+    background-position:center;    
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+html{
+    font-family : verdana;
+}
+
+/*General Wrap*/
+#generalWrap{
+    position: absolute;
+    height: 45%;
+    width: 98%;
+    left: 1%;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: #EEEEEE;
+    border: 1px solid;
+    border-color: #E0E0E0;
+    box-shadow: 3px 3px 2px #888880;
+}
+
+html, span{
+    font-family : verdana;
+}
+
+/*Top Div*/
+#driverInformationTopDiv{
+    height: 20%;        
+    width: 100%;
+    background-color: #E0E0E0;
+}
+
+#driverImageDiv{
+    position: relative;
+    display: inline-block;  
+    height: 100%;
+    width: 35%;
+}
+
+#driverImg{
+    height: 100%;
+    width: 40%%;
+    float: right;
+}
+
+#driverInformation{
+    bottom: 10px;
+    width: 49%;
+    position: relative;
+    display: inline-block;
+}
+
+/*Central Div*/
+#centralDiv{
+    position: relative;
+    top: auto;
+    height: 15%;
+    width: 100%;
+    padding-top: 3%;
+}
+
+#paymentDiv{
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    width: 49%;
+}
+
+#masterCardImg{
+    height: 50%;
+    width: 20%;
+    float: right;
+}
+
+#payment{
+    float: right;
+    margin-left: 20px;
+    color: #616161;
+    margin-right: 10px;
+    font-size: 12px;
+}
+
+#price{
+    position: relative;
+    width: 49%;
+    bottom: 60%;
+    display: inline-block;
+}
+
+/*Bottom Div*/
+#bottomDiv{
+    height: 25%;
+    padding-top: 5px;
+    background-color: #E0E0E0;
+    width: 100%;
+}
+
+#origin{
+    color: darkblue;
+    margin-left: 15px;
+    font-size: 14px;
+}
+
+#destination{
+    color: #E91E63;
+    margin-left: 15px;
+    font-size: 14px;
+    margin-top: 5%;
+}
+
+/*Button*/
+/*******/
+#divButton{
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+#buttonSetPickup{
+    background-color: #E91E63;
+    color: white;
+    font-size: 18px;
+    height: 50px;
+    width: 95%;
+    border-radius: 10px;
+    box-shadow: 3px 3px 2px #888880;
+}
+
+/*Typography*/
+#pickupLocationStreet{
+    font-size: 14px;
+    color: #616161;
+}
+
+#pickupLocationInfo{
+    font-size: 11px;
+    color: #9E9E9E;
+}
+
+#total{
+    color:#616161;
+    font-size: 12px;
+}

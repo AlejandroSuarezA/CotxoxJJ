@@ -1,0 +1,97 @@
+/*Estimated cost style*/
+/*******************/
+body{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    margin: 0;
+    position: absolute;
+    background-position:center;  
+}
+html, span{
+    font-family : verdana;
+    font-size: 13px;
+}
+
+/*General Wrap*/
+#generalWrap{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+}
+
+/*Bottom*/
+/*******/
+#bottom{
+    position: relative;
+    text-align: center;
+    height: auto;
+    width: 100%;
+}
+
+#price, #price>span{
+    font-size: 27px;
+    color: #616161;
+}
+
+td>button{
+    border: none;
+    font-size: 15px;
+    font-family: verdana;
+    padding: 5px;
+    background-color: white;
+    color: #816561; 
+}
+
+/*Button*/
+/*******/
+#divButton{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+
+#buttonSetPickup{
+    background-color: grey;
+    color: white;
+    font-size: 18px;
+    height: 50px;
+    width: 100%;
+}
+
+/*Typography*/
+
+#divLimosna{
+    position: relative;
+    top: 0;
+    height: 25%;
+    border-bottom: 4px solid;
+    border-color: #616161;
+    background-color: #E0E0E0;
+    text-align: center;
+    padding-top: 25%;
+}
+#limosna, #driverBoy{
+    font-family: verdana;
+    font-size: 17px;
+    color: #816561;
+}
+
+#table{
+    margin-top: 15%;
+    padding-left: 20%;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    border-color: #616161;
+}
+
+#tableRate{
+    margin-top: 15%;
+    padding-left: 35%;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    border-color: #616161;
+}

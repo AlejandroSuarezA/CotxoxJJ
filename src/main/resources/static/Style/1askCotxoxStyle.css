@@ -1,0 +1,98 @@
+/*Styles pedir coche*/
+/*******************/
+body{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    margin: 0;
+    position: absolute;
+    background-image: url(../Multimedia/borjaMollMaps.png);
+    background-position:center;    
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+html{
+    font-family : verdana;
+}
+
+/*Driver Information*/
+/*******************/
+#driverInfo{
+    position: absolute;
+    bottom: 100px;
+    width: 97%;
+    left: 1%;
+    height: 70px;
+    border-radius: 5px;
+    background-color: #EEEEEE;
+    border: 1px solid;
+    border-color: #E0E0E0;
+    box-shadow: 3px 3px 2px #888880;
+}
+
+#driverImage{
+    position: relative;
+    float: left;
+    height: 100%;
+    width: 15%;
+}
+
+#driverImg{
+    height: 100%;
+    width: 100%;
+}
+
+#userLocation{
+    position: relative;
+    height: 20%;
+    width: 85%;
+    top: 0;
+    float: right;
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 5%;
+}
+
+#pickupLocation{
+    position: relative;
+    height: 49%;
+    width: 85%;
+    bottom: 0;
+    float: right;
+    display: inline-block;
+}
+
+
+/*Typography*/
+/***********/
+#pickupLocationStreet{
+    font-size: 17px;
+    color: #616161;
+    margin-left: 15%;
+}
+
+#pickupLocationInfo{
+    font-size: 11px;
+    color: #9E9E9E;
+    margin-left: 15%;
+}
+
+/*Button*/
+/*******/
+#divButton{
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+#buttonSetPickup{
+    background-color: #512DA8;
+    color: white;
+    font-size: 18px;
+    height: 50px;
+    width: 95%;
+    border-radius: 10px;
+    box-shadow: 3px 3px 2px #888880;
+}
