@@ -1,5 +1,8 @@
 package org.foobarspam.model;
 
+import java.util.List;
+import java.util.Random;
+
 import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +33,18 @@ public class CotxoxService {
 	
 	public Long getFlotila(){
 		return conductoresDb.count();
+	}
+	
+	public void addCarrera(Carrera carrera){
+		this.carreraDb.save(carrera);
+	}
+	
+	public Conductor getADriver(){
+		List<Conductor> disponibles = this.conductoresDb.findByOcupado(false);
+		
+		Conductor random = disponibles.get(new Random().nextInt(disponibles.size()));
+		
+		return random;
 	}
 
 }

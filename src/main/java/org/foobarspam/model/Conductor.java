@@ -27,6 +27,10 @@ public class Conductor {
 
 	// Constructor
 
+	public Conductor(){
+		
+	}
+	
 	public Conductor(String nombre) {
 		this.nombre = nombre;
 	}

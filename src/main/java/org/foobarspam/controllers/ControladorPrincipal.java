@@ -2,6 +2,7 @@ package org.foobarspam.controllers;
 
 import org.foobarspam.model.Carrera;
 import org.foobarspam.model.CotxoxService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -13,6 +14,9 @@ public class ControladorPrincipal {
 	
 	private Carrera carrera;
 	
+	@Autowired
+	private CotxoxService cotxoxService;
+	
 	@ModelAttribute(name="carrera")
 	public Carrera getCarrera(){
 		return this.carrera;
@@ -22,6 +26,7 @@ public class ControladorPrincipal {
 	@RequestMapping(path="/home")
 	public String setPickUp(){
 		this.carrera = new Carrera("123456");
+		this.cotxoxService.addCarrera(this.carrera);
 		return "1AskCotxox";
 	}
 	
@@ -31,8 +36,11 @@ public class ControladorPrincipal {
 		return "2EstimatedCost";
 	}
 	
+	
+	
 	@RequestMapping(path="/getRide")
 	public String getRide(Model model){
+		this.carrera.setConductor(this.cotxoxService.getADriver());
 		model.addAttribute("nameConductor", this.carrera.getNombre());
 		model.addAttribute("marcaMoto", this.carrera.getModelo());
 		model.addAttribute("valoracion", this.carrera.getValoracion());
@@ -40,10 +48,14 @@ public class ControladorPrincipal {
 		return "3driverInformation";
 	}
 	
+	
+	
 	@RequestMapping(path="/pay")
 	public String payRide(){
 		return "4payDriver";
 	}
+	
+	
 	
 	@RequestMapping(path="/rate")
 	public String rateDriver(){
