@@ -18,8 +18,8 @@ public class Carrera {
 	private String origen = "punto de origen";
 	private String destino = "punto de destino";
 	
-	private double distancia = 0.0;
-	private int tiempoEsperadoMinutos = 0;
+	private Double distancia = 0.0;
+	private Integer tiempoEsperadoMinutos = 0;
 	
 	@OneToOne
 	private Conductor conductor = null;
@@ -75,14 +75,14 @@ public class Carrera {
 	
 	//Calculate price
 	
-	/*public double getCosteEsperado(){
+	public double getCosteEsperado(){
 		
 		double distancia = this.getDistancia();
 		double tiempo = this.getTiempoEsperado();
 		
 		return Tarifa.getCosteTotalEsperado(tiempo, distancia);
 		
-	}*/
+	}
 	
 	//Driver assignment
 	
@@ -121,7 +121,7 @@ public class Carrera {
 		this.costeTotal = precio;
 	}
 	
-	public double getCosteTotal(){
+	public Double getCosteTotal(){
 		return this.costeTotal;
 	}
 	

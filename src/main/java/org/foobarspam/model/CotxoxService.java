@@ -1,5 +1,6 @@
 package org.foobarspam.model;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -17,6 +18,7 @@ public class CotxoxService {
 	@Autowired
 	private CarreraRepository carreraDb;
 	
+	private ArrayList<Localizaciones> sitios = new ArrayList<>();
 	
 	@PostConstruct
 	public void init(){
@@ -24,6 +26,12 @@ public class CotxoxService {
 		conductoresDb.save(new Conductor("Yisus"));
 		conductoresDb.save(new Conductor("Jebús"));
 		conductoresDb.save(new Conductor("Super Jesus"));
+		
+		sitios.add(new Localizaciones("Magaluf", 5.0 , 25));
+		sitios.add(new Localizaciones("La Catedral", 15.0 , 5));
+		sitios.add(new Localizaciones("Aeropuerto", 25.0 , 15));
+		sitios.add(new Localizaciones("Mordor", 40.0 , 50));
+
 	}
 	
 	

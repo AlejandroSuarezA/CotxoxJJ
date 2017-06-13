@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
@@ -31,7 +32,7 @@ public class ControladorPrincipal {
 	}
 	
 	@RequestMapping(path="/estimatedCost")
-	public String estimatedCost(Model model){
+	public String estimatedCost(@RequestParam(name="dist", defaultValue = "0") String dist, Model model){
 		model.addAttribute("precio", this.carrera.getCosteTotal());
 		return "2EstimatedCost";
 	}
