@@ -1,8 +1,14 @@
 package org.foobarspam.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Localizaciones {
 	
+	@Id
 	private String name;
+	
 	private Double distancia;
 	private Integer tiempo;
 	
