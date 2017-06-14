@@ -18,8 +18,8 @@ public class Carrera {
 	private String origen = "punto de origen";
 	private String destino = "punto de destino";
 	
-	private Double distancia = 0.0;
-	private Integer tiempoEsperadoMinutos = 0;
+	private double distancia = 0.0;
+	private int tiempoEsperadoMinutos = 0;
 	
 	@OneToOne
 	private Conductor conductor = null;
@@ -69,7 +69,7 @@ public class Carrera {
 		return this.distancia;
 	}
 	
-	public double getTiempoEsperado(){
+	public int getTiempoEsperado(){
 		return this.tiempoEsperadoMinutos;
 	}
 	
@@ -111,13 +111,8 @@ public class Carrera {
 		this.conductor = conductor;
 	}
 	
-	/*public void asignarConductor(PoolConductores pool){
-		this.setConductor(pool.asignarConductor());
-		
-	}*/
-	
 	//Pay & Tip
-	public void realizarPago(double precio){
+	public void realizarPago(Double precio){
 		this.costeTotal = precio;
 	}
 	

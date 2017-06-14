@@ -32,8 +32,12 @@ public class ControladorPrincipal {
 	}
 	
 	@RequestMapping(path="/estimatedCost")
-	public String estimatedCost(@RequestParam(name="dist", defaultValue = "0") String dist, Model model){
-		model.addAttribute("precio", this.carrera.getCosteTotal());
+	public String estimatedCost(@RequestParam(name="dist", defaultValue = "Magaluf") String dist, Model model){
+		this.carrera.setDistancia(this.cotxoxService.getMapa(dist).getDistancia());
+		this.carrera.setTiempoEsperado(this.cotxoxService.getMapa(dist).getTiempo());
+		
+		Double coste = this.carrera.getCosteEsperado();
+		model.addAttribute("precio", coste.toString());
 		return "2EstimatedCost";
 	}
 	
@@ -42,10 +46,12 @@ public class ControladorPrincipal {
 	@RequestMapping(path="/getRide")
 	public String getRide(Model model){
 		this.carrera.setConductor(this.cotxoxService.getADriver());
+		
 		model.addAttribute("nameConductor", this.carrera.getNombre());
 		model.addAttribute("marcaMoto", this.carrera.getModelo());
 		model.addAttribute("valoracion", this.carrera.getValoracion());
 		model.addAttribute("imgConductor", this.carrera.getCareto());
+		
 		return "3driverInformation";
 	}
 	

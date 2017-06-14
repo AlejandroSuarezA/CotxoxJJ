@@ -56,5 +56,8 @@ public class CotxoxService {
 		return random;
 	}
 	
+	public Localizaciones getMapa(String sitio){
+		return sitios.findByName(sitio);
+	}
 
 }

@@ -9,10 +9,14 @@ public class Localizaciones {
 	@Id
 	private String name;
 	
-	private Double distancia;
-	private Integer tiempo;
+	private double distancia;
+	private int tiempo;
 	
-	public Localizaciones(String nombre, Double distancia, Integer tiempo){
+	public Localizaciones(){
+		
+	}
+	
+	public Localizaciones(String nombre, double distancia, int tiempo){
 		this.name = nombre;
 		this.distancia = distancia;
 		this.tiempo = tiempo;
@@ -22,11 +26,11 @@ public class Localizaciones {
 		return this.name;
 	}
 	
-	public Double getDistancia(){
+	public double getDistancia(){
 		return this.distancia;
 	}
 	
-	public Integer getTiempo(){
+	public int getTiempo(){
 		return this.tiempo;
 	}
 
