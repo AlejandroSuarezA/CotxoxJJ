@@ -58,7 +58,10 @@ public class ControladorPrincipal {
 	
 	
 	@RequestMapping(path="/pay")
-	public String payRide(){
+	public String payRide(Model model){
+		
+		Double coste = this.carrera.getCosteEsperado();
+		model.addAttribute("precio", coste.toString());
 		return "4payDriver";
 	}
 	

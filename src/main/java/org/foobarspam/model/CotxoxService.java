@@ -23,10 +23,31 @@ public class CotxoxService {
 	
 	@PostConstruct
 	public void init(){
-		conductoresDb.save(new Conductor("Jésus"));
-		conductoresDb.save(new Conductor("Yisus"));
-		conductoresDb.save(new Conductor("Jebús"));
-		conductoresDb.save(new Conductor("Super Jesus"));
+		
+		Conductor Jesus = new Conductor("Jesus");
+		Jesus.setCareto("../Multimedia/1.jpg");
+		Jesus.setMatricula("123");
+		Jesus.setModelo("Motillo");
+		
+		Conductor Yisus = new Conductor("Yisus");
+		Yisus.setCareto("../Multimedia/2.jpg");
+		Yisus.setMatricula("456");
+		Yisus.setModelo("Motillo guay");
+		
+		Conductor Jebus = new Conductor("Jebus");
+		Jebus.setCareto("../Multimedia/3.jpg");
+		Jebus.setMatricula("789");
+		Jebus.setModelo("Motillo flama");
+		
+		Conductor SuperJesus = new Conductor("Super Jesus");
+		SuperJesus.setCareto("../Multimedia/4.jpg");
+		SuperJesus.setMatricula("12345");
+		SuperJesus.setModelo("Super Motillo");
+		
+		conductoresDb.save(Jesus);
+		conductoresDb.save(Yisus);
+		conductoresDb.save(Jebus);
+		conductoresDb.save(SuperJesus);
 		
 		sitios.save(new Localizaciones("Magaluf", 5.0 , 25));
 		sitios.save(new Localizaciones("La Catedral", 15.0 , 5));
@@ -52,6 +73,7 @@ public class CotxoxService {
 		List<Conductor> disponibles = this.conductoresDb.findByOcupado(false);
 		
 		Conductor random = disponibles.get(new Random().nextInt(disponibles.size()));
+		random.ocupar();
 		
 		return random;
 	}
